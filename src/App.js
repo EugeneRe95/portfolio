@@ -32,22 +32,22 @@ function App() {
     new WOW().init({animateClass: 'animate__animated'});
   })
   return (
-    <Router basename="/portfolio">
+    <Router>
       <Sidebar/>
       <Menu/>
       <div id="main-wrapper">
-              <Route exact path="/">
-                <Home/>
-                <About/>
-                <Resume/>
-                <Skills/>
-                <ProjectsHome/>
-              </Route>
-              <ScrollToTop>
-                <Route exact path="/projects" component={Projects}/>
-                <Route exact path="/projects/:id" render={(globalStore, props)=> <AboutProject globalStore={globalStore}{...props}/>}/>
-                <Route exact path="/contacts" component={Contacts}/>
-              </ScrollToTop>
+        <Route exact path="/">
+          <Home/>
+          <About/>
+          <Resume/>
+          <Skills/>
+          <ProjectsHome/>
+        </Route>
+        <ScrollToTop>
+          <Route exact path="/projects" component={Projects}/>
+          <Route exact path="/projects/:id" render={(globalStore, props)=> <AboutProject globalStore={globalStore}{...props}/>}/>
+          <Route exact path="/contacts" component={Contacts}/>
+        </ScrollToTop>
       </div>
     </Router>
   );
