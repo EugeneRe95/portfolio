@@ -1,0 +1,3 @@
+export const SHOW_MENU = "MENU/SHOW_MENU"
+export const HIDE_MENU = "MENU/HIDE_MENU"
+export const FILTER_PROJECTS = "PROJECTS/FILTER_PROJECTS"
