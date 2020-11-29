@@ -11,7 +11,7 @@ export class ProjectsHome extends Component {
                 </div>
                 <div className="container">
                     <div className="items">
-                    {this.props.state.projects.slice(0,3).map((item,index)=>(
+                    {this.props.projects.slice(0,3).map((item,index)=>(
                         <div className="item wow animate__animated animate__fadeIn" key={item.title} style={{backgroundImage:`url(${item.imagePath})`, animationDelay: 200*index+'ms'}} onClick={void(0)}>
                             <h4 className="title">{item.title}</h4>
                             <div className="nav-bar">
@@ -38,7 +38,7 @@ export class ProjectsHome extends Component {
 
 const mapStateToProps = state =>{
     return{
-        state: state.app
+        projects: state.app.projects
     }
 }
 

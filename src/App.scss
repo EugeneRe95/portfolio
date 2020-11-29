@@ -40,7 +40,7 @@ header {
   left: 0;
   z-index: 50;
   width: 80px;
-  bottom: 0;
+  height: 100%;
   background: $main-color;
   display: flex;
   flex-direction: column;
@@ -556,7 +556,7 @@ header {
       margin-left: 5%;
 
       h1 {
-        font-size: 30px;
+        font-size: 38px;
       }
     }
 
@@ -593,6 +593,7 @@ header {
       width: 100%;
       height: 100%;
       background-position: center center;
+      filter: blur(3px) contrast(120%) brightness(70%) drop-shadow(0 0 3px #000);;
     }
 
     .scroll-navigation {
@@ -603,7 +604,7 @@ header {
   @media screen and (max-width: 500px) {
     .home-welcoming {
       h1 {
-        font-size: 25px;
+        font-size: 28px;
       }
     }
   }
@@ -1051,12 +1052,13 @@ header {
   .items {
     width: 100%;
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
 
     .item {
       display: flex;
       width: 100%;
-      max-width: 400px;
+      // max-width: 400px;
       height: 280px;
       background-repeat: no-repeat;
       background-position: center center;
@@ -1161,7 +1163,6 @@ header {
 }
 
 #projects-home {
-  display: flex;
   background: #fff;
   padding: 50px 0;
   display: flex;

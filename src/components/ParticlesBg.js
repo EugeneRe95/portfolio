@@ -13,8 +13,10 @@ export class ParticlesBg extends Component {
                 this.setState({push: false})
             }
         });
-      this.resizeWindowListener = window.addEventListener('resize', ()=>{
-            let width=window.innerWidth;
+      this.resizeWindowListener = window.addEventListener('resize', this.resizeWindowListener, false)
+    }
+    resizeWindowListener = () =>{
+        let width=window.innerWidth;
             this.setState({number: width/30},()=>{
                 if(width<500){
                     this.setState({push: false})
@@ -22,7 +24,6 @@ export class ParticlesBg extends Component {
                     this.setState({push: true})
                 }
             });
-        })
     }
     componentWillUnmount(){
         window.removeEventListener('resize', this.resizeWindowListener )
