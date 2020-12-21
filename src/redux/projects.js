@@ -5,6 +5,7 @@ import mon_pion from '../images/projects/mon_pion.png'
 import mas from '../images/projects/mas.jpeg'
 import rsub from '../images/projects/rsub.jpeg'
 import atl from '../images/projects/atl.png'
+import wwtbam from '../images/projects/wwtbam.png'
 
 export const projetsList = [
     {
@@ -51,6 +52,15 @@ export const projetsList = [
         technologies: ['React', 'Redux','React_Router', 'SCSS'],
         infoRoute: 'awesome_todo_list',
         description: 'Task manager app. All tasks store in redux store as well as in localStorage, so user has ability to save all tasks after turning off the app. Each created task is validated for name and unique pair value name/date. There are 4 types of deadline to be set automatically: actual date, no deadline, today, expired. All tasks are ditributed between routes for convenient management. There is scoreboard which indicates the amount of each task type. User can delete or complete specific task.'
+    },
+    {
+        title: 'Who wants to be a millionaire',
+        imagePath: wwtbam,
+        showLink:'http://eugenere95.github.io/who_wants_to_be_a_millionaire',
+        gitHubLink:'https://github.com/EugeneRe95/who_wants_to_be_a_millionaire/tree/main',
+        technologies: ['React', 'Redux', 'Redux_Thunk', 'React_Router', 'SCSS'],
+        infoRoute: 'who_wants_to_be_a_millionaire',
+        description: 'Who wants to be a millionaire game. All questions are fetched from JSON API. User picks the answer and its status updated to selected/correct/wrong/disabled. If the answer is correct, the next question is displayed. Otherwise user is redirected to final screen with game score.'
     },
     {
         title: 'Galinas',
